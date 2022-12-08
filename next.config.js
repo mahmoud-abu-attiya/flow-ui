@@ -4,3 +4,13 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+module.exports = {
+   async rewrites() {
+      return [
+         {
+            source: "/api/hiring/:path*",
+            destination: "https://goldblv.com/api/hiring/:path*",
+         },
+      ];
+   },
+};
